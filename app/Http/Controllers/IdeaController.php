@@ -18,7 +18,7 @@ class IdeaController extends Controller
             'description' => 'required'
         ]);
 
-        Idea::create($request->get('description'));
+        Idea::create($request->only('description'));
 
         return;
     }
